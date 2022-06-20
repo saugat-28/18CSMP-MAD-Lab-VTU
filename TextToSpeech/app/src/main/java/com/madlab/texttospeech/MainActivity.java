@@ -19,15 +19,13 @@ public class MainActivity extends AppCompatActivity {
 
         TextToSpeech textToSpeech = new TextToSpeech(getBaseContext(), status -> {
             if (status != TextToSpeech.ERROR) {
-                Toast.makeText(getBaseContext(),
-                        "Success",
-                        Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(), "Text To Speech Initialized", Toast.LENGTH_LONG).show();
             }
         });
 
         mainBinding.speakButton.setOnClickListener(v -> {
             String text = mainBinding.inputText.getText().toString();
-            textToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+            textToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, null, null);
         });
     }
 }
