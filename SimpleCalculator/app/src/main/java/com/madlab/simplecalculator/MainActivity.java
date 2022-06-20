@@ -10,6 +10,7 @@ import com.madlab.simplecalculator.databinding.ActivityMainBinding;
 
 import java.util.regex.Pattern;
 
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private ActivityMainBinding mB;
     @Override
@@ -81,11 +82,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (v.equals(mB.buttonMinus)) {
             mB.resultEditText.append("-");
         }
-        if (v.equals(mB.buttonClear)) {
-            mB.resultEditText.setText("");
-        }
         if (v.equals(mB.buttonDot)) {
             mB.resultEditText.append(".");
+        }
+        if (v.equals(mB.buttonClear)) {
+            mB.resultEditText.setText("");
         }
         if (v.equals(mB.buttonEquals)) {
             calculate();
@@ -125,7 +126,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(getBaseContext(), "Invalid Expression", Toast.LENGTH_LONG).show();
             }
         } else if (expression.contains("-")) {
-            String[] operands = expression.split("-");
+            String[] operands = expression.split(Pattern.quote("-"));
             if (operands.length == 2) {
                 double operand1 = Double.parseDouble(operands[0]);
                 double operand2 = Double.parseDouble(operands[1]);

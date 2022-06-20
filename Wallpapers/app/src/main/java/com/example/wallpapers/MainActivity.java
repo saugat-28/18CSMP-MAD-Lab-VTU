@@ -26,18 +26,18 @@ public class MainActivity extends AppCompatActivity {
         running = false;
 
         mainBinding.changeButton.setOnClickListener(v -> {
-            running = !running;
             if(!running){
                 changeWallpaper();
             }
+            running = !running;
         });
     }
 
     private void changeWallpaper(){
-        new Timer().schedule(new MyTimer(), 0, 10000);
+        new Timer().schedule(new WallpaperTimerTask(), 0, 10000);
     }
 
-    class MyTimer extends TimerTask {
+    class WallpaperTimerTask extends TimerTask {
         @Override
         public void run() {
             try {

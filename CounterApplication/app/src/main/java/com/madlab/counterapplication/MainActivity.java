@@ -48,3 +48,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
+
+// If handler is to be used, replace runOnUiThread with the following commented code.
+/*
+ new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+       @Override
+       public void run() {
+           mainBinding.counterText.setText(String.valueOf(counter));
+       }
+ }, 0);*/
