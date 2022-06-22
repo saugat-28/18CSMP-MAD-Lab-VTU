@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="1"
-            android:backgroundTint="@color/grey"
+            android:backgroundTint="@color/blue"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:text="2"
-            android:backgroundTint="@color/grey"
+            android:backgroundTint="@color/blue"
             app:layout_constraintStart_toEndOf="@+id/button_1"
             app:layout_constraintTop_toTopOf="@id/button_1" />
 
@@ -75,7 +75,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:text="3"
-            android:backgroundTint="@color/grey"
+            android:backgroundTint="@color/blue"
             app:layout_constraintStart_toEndOf="@+id/button_2"
             app:layout_constraintTop_toTopOf="@id/button_2" />
 
@@ -85,7 +85,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:text="/"
-            android:backgroundTint="@color/grey"
+            android:backgroundTint="@color/blue"
             app:layout_constraintStart_toEndOf="@+id/button_3"
             app:layout_constraintTop_toTopOf="@id/button_3" />
 
@@ -96,7 +96,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="4"
-            android:backgroundTint="@color/grey"
+            android:backgroundTint="@color/blue"
             app:layout_constraintStart_toStartOf="@id/button_1"
             app:layout_constraintTop_toBottomOf="@id/button_1" />
 
@@ -106,7 +106,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:text="5"
-            android:backgroundTint="@color/grey"
+            android:backgroundTint="@color/blue"
             app:layout_constraintStart_toEndOf="@+id/button_4"
             app:layout_constraintTop_toTopOf="@id/button_4" />
 
@@ -116,7 +116,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:text="6"
-            android:backgroundTint="@color/grey"
+            android:backgroundTint="@color/blue"
             app:layout_constraintStart_toEndOf="@+id/button_5"
             app:layout_constraintTop_toTopOf="@id/button_5" />
 
@@ -126,7 +126,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:text="*"
-            android:backgroundTint="@color/grey"
+            android:backgroundTint="@color/blue"
             app:layout_constraintStart_toEndOf="@+id/button_6"
             app:layout_constraintTop_toTopOf="@id/button_6" />
 
@@ -136,7 +136,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="7"
-            android:backgroundTint="@color/grey"
+            android:backgroundTint="@color/blue"
             app:layout_constraintStart_toStartOf="@id/button_4"
             app:layout_constraintTop_toBottomOf="@id/button_4" />
 
@@ -146,7 +146,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:text="8"
-            android:backgroundTint="@color/grey"
+            android:backgroundTint="@color/blue"
             app:layout_constraintStart_toEndOf="@+id/button_7"
             app:layout_constraintTop_toTopOf="@id/button_7" />
 
@@ -156,7 +156,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:text="9"
-            android:backgroundTint="@color/grey"
+            android:backgroundTint="@color/blue"
             app:layout_constraintStart_toEndOf="@+id/button_8"
             app:layout_constraintTop_toTopOf="@id/button_8" />
 
@@ -166,7 +166,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:text="+"
-            android:backgroundTint="@color/grey"
+            android:backgroundTint="@color/blue"
             app:layout_constraintStart_toEndOf="@+id/button_9"
             app:layout_constraintTop_toTopOf="@id/button_9" />
 
@@ -176,7 +176,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="."
-            android:backgroundTint="@color/grey"
+            android:backgroundTint="@color/blue"
             app:layout_constraintStart_toStartOf="@id/button_7"
             app:layout_constraintTop_toBottomOf="@id/button_7" />
 
@@ -186,7 +186,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:text="0"
-            android:backgroundTint="@color/grey"
+            android:backgroundTint="@color/blue"
             app:layout_constraintStart_toEndOf="@+id/button_dot"
             app:layout_constraintTop_toTopOf="@id/button_dot" />
 
@@ -196,7 +196,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:text="="
-            android:backgroundTint="@color/grey"
+            android:backgroundTint="@color/blue"
             app:layout_constraintStart_toEndOf="@+id/button_0"
             app:layout_constraintTop_toTopOf="@id/button_0" />
 
@@ -206,7 +206,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:text="-"
-            android:backgroundTint="@color/grey"
+            android:backgroundTint="@color/blue"
             app:layout_constraintStart_toEndOf="@+id/button_equals"
             app:layout_constraintTop_toTopOf="@id/button_equals" />
 
@@ -216,7 +216,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="Clear"
-            android:backgroundTint="@color/grey"
+            android:backgroundTint="@color/blue"
             app:layout_constraintEnd_toEndOf="@id/button_minus"
             app:layout_constraintTop_toBottomOf="@id/button_minus" />
 

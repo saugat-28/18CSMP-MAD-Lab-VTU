@@ -30,7 +30,7 @@ public class ViewDataActivity extends AppCompatActivity {
         mode = getIntent().getIntExtra("mode", 0);
         if (mode == 1) {
             parseJSON();
-        } else {
+        } else if (mode == 2) {
             parseXML();
         }
     }
@@ -47,9 +47,9 @@ public class ViewDataActivity extends AppCompatActivity {
 
             String city = "City Name:" + cityObject.getString("Name") + "\n" +
                     "Latitude:" + cityObject.getString("Latitude") + "\n" +
-                    "Longitude" + cityObject.getString("Longitude") + "\n" +
+                    "Longitude:" + cityObject.getString("Longitude") + "\n" +
                     "Temperature:" + cityObject.getInt("Temperature") + "\n " +
-                    "Humidity" + cityObject.getString("Humidity") + "\n";
+                    "Humidity:" + cityObject.getString("Humidity") + "\n";
 
             viewDataBinding.jsonData.setText(city);
         } catch (Exception e) {
