@@ -9,4 +9,5 @@ INSTRUCTIONS:
        viewBinding true
     }
 >>3. Click on Sync Now
+
 >References: https://developer.android.com/topic/libraries/view-binding
