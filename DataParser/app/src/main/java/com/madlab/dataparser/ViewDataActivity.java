@@ -1,6 +1,7 @@
 package com.madlab.dataparser;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -31,7 +32,7 @@ public class ViewDataActivity extends AppCompatActivity {
         if (mode == 1) {
             parseJSON();
         } else if (mode == 2) {
-            parseXML();
+            parseXMLShortened();
         }
     }
 
@@ -40,7 +41,6 @@ public class ViewDataActivity extends AppCompatActivity {
             InputStream inputStream = getAssets().open("weather.json");
             byte[] data = new byte[inputStream.available()];
             inputStream.read(data);
-
             String readData = new String(data);
             JSONObject jsonObject = new JSONObject(readData);
             JSONObject cityObject = jsonObject.getJSONObject("City");
@@ -57,6 +57,30 @@ public class ViewDataActivity extends AppCompatActivity {
         }
     }
 
+    // For Only One "City" Node
+    private void parseXMLShortened() {
+        try {
+            InputStream inputStream = getAssets().open("weather.xml");
+            DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+            Document document = builder.parse(inputStream);
+            document.getDocumentElement().normalize();
+
+            NodeList list = document.getElementsByTagName("City");
+            String city = "";
+            Element item = (Element) list.item(0);
+            city += "City Name : " + getValue("Name", item) + "\n" +
+                    "Latitude : " + getValue("Latitude", item) + "\n" +
+                    "Longitude : " + getValue("Longitude", item) + "\n" +
+                    "Temperature : " + getValue("Temperature", item) + "\n" +
+                    "Humidity : " + getValue("Humidity", item) + "\n";
+            city += "\n\n";
+            viewDataBinding.xmlData.setText(city);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    // For Multiple "City" Nodes
     private void parseXML() {
         try {
             InputStream inputStream = getAssets().open("weather.xml");
@@ -70,6 +94,7 @@ public class ViewDataActivity extends AppCompatActivity {
                 Node node = list.item(i);
                 String city = "";
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
+                    Log.d("View", "I: " + i);
                     Element item = (Element) node;
                     city += "City Name : " + getValue("Name", item) + "\n" +
                             "Latitude : " + getValue("Latitude", item) + "\n" +

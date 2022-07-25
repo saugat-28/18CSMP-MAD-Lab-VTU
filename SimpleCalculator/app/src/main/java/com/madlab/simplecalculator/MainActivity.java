@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(getBaseContext(), "Invalid Expression", Toast.LENGTH_LONG).show();
             }
         } else if (expression.contains("-")) {
-            String[] operands = expression.split(Pattern.quote("-"));
+            String[] operands = expression.split("-");
             if (operands.length == 2) {
                 double operand1 = Double.parseDouble(operands[0]);
                 double operand2 = Double.parseDouble(operands[1]);

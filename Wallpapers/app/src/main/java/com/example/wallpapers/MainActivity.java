@@ -13,7 +13,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
-    private ActivityMainBinding mainBinding;
+    ActivityMainBinding mainBinding;
     boolean running;
     int[] imageArray = new int[]{R.drawable.image1, R.drawable.image2, R.drawable.image3, R.drawable.image4, R.drawable.image5};
 
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void changeWallpaper(){
-        new Timer().schedule(new WallpaperTimerTask(), 0, 10000);
+        new Timer().schedule(new WallpaperTimerTask(), 0, 1000);
     }
 
     class WallpaperTimerTask extends TimerTask {

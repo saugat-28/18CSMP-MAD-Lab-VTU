@@ -56,4 +56,5 @@ public class MainActivity extends AppCompatActivity {
        public void run() {
            mainBinding.counterText.setText(String.valueOf(counter));
        }
- }, 0);*/
+ }, 0);
+ */
