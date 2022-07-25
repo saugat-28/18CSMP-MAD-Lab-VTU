@@ -66,14 +66,12 @@ public class ViewDataActivity extends AppCompatActivity {
             document.getDocumentElement().normalize();
 
             NodeList list = document.getElementsByTagName("City");
-            String city = "";
             Element item = (Element) list.item(0);
-            city += "City Name : " + getValue("Name", item) + "\n" +
+            String city = "City Name : " + getValue("Name", item) + "\n" +
                     "Latitude : " + getValue("Latitude", item) + "\n" +
                     "Longitude : " + getValue("Longitude", item) + "\n" +
                     "Temperature : " + getValue("Temperature", item) + "\n" +
                     "Humidity : " + getValue("Humidity", item) + "\n";
-            city += "\n\n";
             viewDataBinding.xmlData.setText(city);
         } catch (Exception e) {
             e.printStackTrace();
